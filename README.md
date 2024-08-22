@@ -1,1 +1,1 @@
-Recreation of THX sound in Pure Data
+THX sound in Pure Data
