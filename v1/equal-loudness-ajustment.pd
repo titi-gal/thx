@@ -1,0 +1,17 @@
+#N canvas 0 100 1920 930 12;
+#X text 618 443 aproximate equal loudness curve;
+#X text 625 426 amp gets small as freq goes up;
+#X obj 528 429 inlet~ freq;
+#X obj 470 459 /~;
+#X obj 470 429 sig~ 1;
+#X obj 470 489 powtodb~;
+#X obj 470 520 dbtorms~;
+#X obj 470 580 outlet~ amp;
+#X text 543 461 based on https://mikemorenodsp.github.io/posts/equal-loudness-oscillator/;
+#X obj 470 550 clip~ 0 1;
+#X connect 2 0 3 1;
+#X connect 3 0 5 0;
+#X connect 4 0 3 0;
+#X connect 5 0 6 0;
+#X connect 6 0 9 0;
+#X connect 9 0 7 0;
